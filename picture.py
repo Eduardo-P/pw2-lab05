@@ -42,7 +42,9 @@ class Picture:
     return Picture(join)
 
   def up(self, p):
-    return Picture(None)
+    up = self.img.copy()
+    up.extend(p.img)
+    return Picture(up)
 
   def under(self, p):
     """ Devuelve una nueva figura poniendo la figura p sobre la
