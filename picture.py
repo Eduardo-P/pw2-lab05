@@ -29,9 +29,9 @@ class Picture:
     for row in self.img:
       new_row = ""
       for i in row:
-        new_row += self._invColor(self, i)
+        new_row += self._invColor(i)
       negative.append(new_row)
-    return Picture(None)
+    return Picture(negative)
 
   def join(self, p):
     """ Devuelve una nueva figura poniendo la figura del argumento 
