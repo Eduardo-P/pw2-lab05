@@ -1,4 +1,4 @@
 from interpreter import draw
 from chessPictures import *
 
-draw(knight.join(queen))
+draw(knight.up(queen))
