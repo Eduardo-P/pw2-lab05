@@ -69,7 +69,7 @@ class Picture:
     return Picture(horizontalRepeat)
 
   def verticalRepeat(self, n):
-    verticalRepeat = self.img.copy()
+    verticalRepeat = []
     for i in range(n):
       verticalRepeat.extend(self.img)
     return Picture(verticalRepeat)
