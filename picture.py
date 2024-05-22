@@ -42,8 +42,8 @@ class Picture:
     return Picture(join)
 
   def up(self, p):
-    up = self.img.copy()
-    up.extend(p.img)
+    up = p.img.copy()
+    up.extend(self.img)
     return Picture(up)
 
   def under(self, p):
