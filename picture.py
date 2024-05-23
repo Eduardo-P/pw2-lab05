@@ -29,9 +29,7 @@ class Picture:
   def join(self, p):
     """ Devuelve una nueva figura poniendo la figura del argumento 
         al lado derecho de la figura actual """
-    join = []
-    for i in range(len(self.img)):
-      join.append(self.img[i] + p.img[i]) 
+    join = [row1 + row2 for row1, row2 in zip(self.img, p.img)]
     return Picture(join)
 
   def up(self, p):
