@@ -55,9 +55,10 @@ class Picture:
     return Picture(horizontalRepeat)
 
   def verticalRepeat(self, n):
-    verticalRepeat = []
-    for i in range(n):
-      verticalRepeat.extend(self.img)
+    verticalRepeat = [
+        row for i in range(n)
+        for row in self.img
+    ]
     return Picture(verticalRepeat)
 
   #Extra: Sólo para realmente viciosos 
