@@ -1,4 +1,4 @@
 from interpreter import draw
 from chessPictures import *
 
-draw(square.under(queen))
+draw(knight.horizontalRepeat(4))
