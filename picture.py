@@ -39,15 +39,10 @@ class Picture:
   def under(self, p):
     """ Devuelve una nueva figura poniendo la figura p sobre la
         figura actual """
-    under = []
-    for i in range(len(self.img)):
-      new_row = ""
-      for j in range(len(self.img[i])):
-        if p.img[i][j] == " ":
-          new_row += self.img[i][j]
-        else:
-          new_row += p.img[i][j]
-      under.append(new_row)
+    under = [
+        ''.join(c1 if c2 == ' ' else c2 for c1, c2 in zip(row1, row2))
+        for row1, row2 in zip(self.img, p.img)
+    ]
     return Picture(under)
   
   def horizontalRepeat(self, n):
