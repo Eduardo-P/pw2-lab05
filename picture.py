@@ -65,11 +65,9 @@ class Picture:
   def rotate(self):
     """Devuelve una figura rotada en 90 grados, puede ser en sentido horario
     o antihorario"""
-    rotate = []
-    for i in range(len(self.img[0])):
-      new_row = ""
-      for row in reversed(self.img):
-        new_row += row[i]
-      rotate.append(new_row)
+    rotate = [
+        ''.join(self.img[j][i] for j in range(len(self.img) - 1, -1, -1))
+        for i in range(len(self.img[0]))
+    ]
     return Picture(rotate)
 
