@@ -81,8 +81,8 @@ class Picture:
     rotate = []
     for i in range(len(self.img[0])):
       new_row = ""
-      for j in reversed(range(len(self.img[i]))):
-        new_row += self.img[j][i]
+      for row in reversed(self.img):
+        new_row += row[i]
       rotate.append(new_row)
     return Picture(rotate)
 
